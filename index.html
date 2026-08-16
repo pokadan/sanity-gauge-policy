@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Sanity Gauge</title>
+    <style>
+        :root {
+            --bg-color: #0b0d10;
+            --card-bg: #111418;
+            --text-primary: #e8ecf4;
+            --text-secondary: #b0bcc8;
+            --accent: #00ffa3;
+            --border: #252c36;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        h2 {
+            color: var(--text-primary);
+            margin-top: 30px;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 50px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sanity Gauge — Privacy Policy</h1>
+            <div class="last-updated">Last Updated: August 16, 2026</div>
+        </div>
+
+        <p>This Privacy Policy applies to the <strong>Sanity Gauge</strong> mobile application (the "App"). We are committed to protecting your privacy and being fully transparent about how your data is handled.</p>
+
+        <div class="card">
+            <strong>Summary:</strong> Sanity Gauge does not require user accounts, does not collect personal identifiers, does not track your location, and does not sell or share personal data with advertisers.
+        </div>
+
+        <h2>1. Information We Collect and How We Use It</h2>
+        <p>Sanity Gauge is an entertainment app designed to evaluate scenarios and provide comedic feedback. To function, the App processes the following:</p>
+        <ul>
+            <li><strong>Audio Data (Microphone):</strong> When you tap the microphone button, the App requests permission to record audio (<code>android.permission.RECORD_AUDIO</code>). Speech-to-text conversion is performed locally via your device's native Android Speech Recognizer. Audio recordings are <strong>not</strong> stored, collected, or uploaded to our servers.</li>
+            <li><strong>User Input Text:</strong> The text you speak or type is transmitted securely via HTTPS to our backend proxy (Supabase Edge Functions) to generate the comedy evaluation using Google Gemini AI models.</li>
+        </ul>
+
+        <h2>2. Third-Party Services and Data Processing</h2>
+        <p>The App utilizes the following third-party infrastructure for AI processing and proxy routing:</p>
+        <ul>
+            <li><strong>Google Gemini API:</strong> Used to generate the risk score and roast summary. Google processes text inputs in accordance with standard API data processing terms. Inputs sent via the API are not used to train Google models.</li>
+            <li><strong>Supabase:</strong> Used as a secure serverless backend proxy to relay API requests without storing personal user records.</li>
+        </ul>
+
+        <h2>3. Data Retention and Storage</h2>
+        <p>We do not maintain a database of user submissions or generated roasts. Once an evaluation is generated and sent back to your device, the session data is not permanently stored on our servers.</p>
+
+        <h2>4. Permissions Used</h2>
+        <ul>
+            <li><code>android.permission.RECORD_AUDIO</code>: Required solely for optional voice input. You can use the app exclusively by typing if you choose not to grant microphone access.</li>
+            <li><code>android.permission.INTERNET</code>: Required to send text prompts to the backend to generate AI responses.</li>
+        </ul>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Sanity Gauge is intended for entertainment purposes and is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy, you can reach us at: <br>
+        <strong>Email:</strong> support@sanitygauge.app</p>
+
+        <div class="footer">
+            &copy; 2026 Sanity Gauge. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
