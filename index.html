@@ -75,47 +75,52 @@
     <div class="container">
         <div class="header">
             <h1>Sanity Gauge — Privacy Policy</h1>
-            <div class="last-updated">Last Updated: August 16, 2026</div>
+            <div class="last-updated">Last Updated: September 18, 2026</div>
         </div>
 
-        <p>This Privacy Policy applies to the <strong>Sanity Gauge</strong> mobile application (the "App"). We are committed to protecting your privacy and being fully transparent about how your data is handled.</p>
+        <p>This Privacy Policy applies to the <strong>Sanity Gauge</strong> mobile application (package: <code>com.pokaaps.sanitygauge</code>), developed by Dan Poka. We are committed to protecting your privacy and being fully transparent about how data is handled.</p>
 
         <div class="card">
-            <strong>Summary:</strong> Sanity Gauge does not require user accounts, does not collect personal identifiers, does not track your location, and does not sell or share personal data with advertisers.
+            <strong>Summary:</strong> Sanity Gauge does not require user accounts, does not collect personal identifiers, does not track your physical location, and does not sell or share personal information with third-party advertisers. All data transmitted between the App and our backend services is encrypted using HTTPS/TLS.
         </div>
 
-        <h2>1. Information We Collect and How We Use It</h2>
-        <p>Sanity Gauge is an entertainment app designed to evaluate scenarios and provide comedic feedback. To function, the App processes the following:</p>
+        <h2>1. Information We Process and How It Is Used</h2>
+        <p>Sanity Gauge is an entertainment application designed to evaluate hypothetical ideas and provide comedic feedback. To deliver this functionality, the App processes the following data:</p>
         <ul>
-            <li><strong>Audio Data (Microphone):</strong> When you tap the microphone button, the App requests permission to record audio (<code>android.permission.RECORD_AUDIO</code>). Speech-to-text conversion is performed locally via your device's native Android Speech Recognizer. Audio recordings are <strong>not</strong> stored, collected, or uploaded to our servers.</li>
-            <li><strong>User Input Text:</strong> The text you speak or type is transmitted securely via HTTPS to our backend proxy (Supabase Edge Functions) to generate the comedy evaluation using Google Gemini AI models.</li>
+            <li><strong>Audio Data & Speech Input (Microphone):</strong> When you tap the microphone button, the App requests permission to record audio (<code>android.permission.RECORD_AUDIO</code>). Speech-to-text conversion is handled strictly on-device using the native Android Speech Recognizer. <strong>Raw audio recordings are never collected, stored, or uploaded to our servers or third parties.</strong></li>
+            <li><strong>User Input Text (Ideas for Evaluation):</strong> The scenario text you type or transcribe is transmitted securely via HTTPS to our serverless backend proxy (Supabase Edge Functions) to request comedic evaluation and risk scoring from Google Gemini AI models. Submissions are processed ephemerally to produce the score and roast, and are not tied to user accounts.</li>
+            <li><strong>Anonymous App Activity & Telemetry:</strong> To improve app stability, optimize performance, and understand user interest in potential features, the App logs anonymous app interactions (e.g., feature clicks, dialog views, and general risk score range) to our secure database (Supabase). This telemetry is completely anonymous and does not contain personal names, email addresses, phone numbers, or persistent hardware identifiers.</li>
         </ul>
 
-        <h2>2. Third-Party Services and Data Processing</h2>
-        <p>The App utilizes the following third-party infrastructure for AI processing and proxy routing:</p>
+        <h2>2. Third-Party Services and Infrastructure</h2>
+        <p>The App relies on trusted third-party cloud infrastructure to operate:</p>
         <ul>
-            <li><strong>Google Gemini API:</strong> Used to generate the risk score and roast summary. Google processes text inputs in accordance with standard API data processing terms. Inputs sent via the API are not used to train Google models.</li>
-            <li><strong>Supabase:</strong> Used as a secure serverless backend proxy to relay API requests without storing personal user records.</li>
+            <li><strong>Google Gemini API:</strong> Used to generate the comedy evaluation, score, and roast. Queries are transmitted securely in accordance with Google Cloud API terms. Under standard Google Cloud API policies, user prompts submitted through the API are not used to train Google models.</li>
+            <li><strong>Supabase:</strong> Acts as our secure serverless backend proxy and telemetry host. All traffic is encrypted in transit using industry-standard TLS/HTTPS protocols.</li>
         </ul>
 
-        <h2>3. Data Retention and Storage</h2>
-        <p>We do not maintain a database of user submissions or generated roasts. Once an evaluation is generated and sent back to your device, the session data is not permanently stored on our servers.</p>
+        <h2>3. Data Security and Encryption</h2>
+        <p>We implement appropriate technical and organizational measures to safeguard data. All communication between the App, Supabase Edge Functions, and the Google Gemini API is encrypted in transit using modern Transport Layer Security (TLS/HTTPS). We do not store sensitive personal information or financial data.</p>
 
         <h2>4. Permissions Used</h2>
         <ul>
-            <li><code>android.permission.RECORD_AUDIO</code>: Required solely for optional voice input. You can use the app exclusively by typing if you choose not to grant microphone access.</li>
-            <li><code>android.permission.INTERNET</code>: Required to send text prompts to the backend to generate AI responses.</li>
+            <li><code>android.permission.RECORD_AUDIO</code>: Optional. Used exclusively for on-demand speech-to-text input when you tap the microphone button. You can use the app fully by typing if you prefer not to grant microphone access.</li>
+            <li><code>android.permission.INTERNET</code>: Required to communicate with the backend proxy to generate AI evaluations and log anonymous telemetry.</li>
         </ul>
 
-        <h2>5. Children's Privacy</h2>
-        <p>Sanity Gauge is intended for entertainment purposes and is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+        <h2>5. Data Retention and Deletion Requests</h2>
+        <p>We do not maintain user profiles, account databases, or persistent records of personal data. Anonymous interaction telemetry is retained only for analytical purposes. If you have questions regarding data handling or wish to request the deletion of any data associated with your inquiries, please contact us at <strong>pokaapps.dev@gmail.com</strong>. We will review and process your request within 30 days.</p>
 
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+        <h2>6. Children's Privacy</h2>
+        <p>Sanity Gauge is designed strictly for entertainment purposes and is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy, you can reach us at: <br>
-        <strong>Email:</strong> pokaapps.dev@gmail.com</p>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any revisions will be published directly on this page with an updated "Last Updated" date.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your privacy while using Sanity Gauge, please contact us at:<br>
+        <strong>Email:</strong> pokaapps.dev@gmail.com<br>
+        <strong>Developer:</strong> Dan Poka</p>
 
         <div class="footer">
             &copy; 2026 Sanity Gauge. All rights reserved.
